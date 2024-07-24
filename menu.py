@@ -136,12 +136,12 @@ while place_order:
                      menu_selection_name = menu_items[int(menu_selection)]
 
                     # Ask the customer for the quantity of the menu item
-                     quantity = input(f"How many {selected_menu} would you like?")
+                     quantity = input(f"How many {menu_selection} would you like?")
 
                     # Check if the quantity is a number, default to 1 if not
-                    if quantity.isdigit():
+                     if quantity.isdigit():
                          quantity = int(quantity)
-                    else:
+                     else:
                         print("The input in not a number. Defaulting to 1.")
                         quantity = 1
                     # Add the item name, price, and quantity to the order list
@@ -172,7 +172,7 @@ else:
 
         # 5. Check the customer's input
 
-                # Keep ordering
+            # Keep ordering
             match keep_ordering.lower():
                 case "y":
                     place_order = True
@@ -182,24 +182,25 @@ else:
                     break
                 case _:
                     print("Invalid input. Please enter y or n.")
-        if keep_ordering == "y":
-            place_order = True
+            if keep_ordering == "y":
+             place_order = True
             
-            break
+            
                 # Exit the keep ordering question loop
-        elif keep_ordering == "n":
+            else: 
+                keep_ordering == "n"
                 place_order = False
                 # Complete the order
 
                 # Since the customer decided to stop ordering, thank them for
                 # their order
-                print("Thank you for your order!")
+            print("Thank you for your order!")
                 # Exit the keep ordering question loop
-                break
+            break
 
                 # Tell the customer to try again
         else:
-            print("Invalid input. Please enter y or n. ")
+                 print("Invalid input. Please enter y or n.")
 
 # Print out the customer's order
 print("This is what we are preparing for you.\n")
